@@ -32,7 +32,7 @@ export function createWebWorker(worker: Function): Worker {
   return new Worker(URL.createObjectURL(blob));
 }
 
-export default () => {
+export default function() {
   const url =
     "http://adverity-challenge.s3-website-eu-west-1.amazonaws.com/DAMKBAoDBwoDBAkOBAYFCw.csv";
   const cache: Cache = {
@@ -88,25 +88,26 @@ export default () => {
     return Object.keys(campaigns).filter(k => k !== "undefined");
   }
 
-  async function getDataFromApiOrCache(): Promise<Data[]> {
+  function getDataFromApiOrCache(): Promise<Data[]> {
     if (!cache.filled) {
-      const response = await fetch(url, {
+      return fetch(url, {
         mode: "cors"
-      });
-
-      if (!response.ok || response.status !== 200) {
-        setTimeout(() => {
-          throw new Error(response.statusText);
-        });
-      }
-
-      const csv = await response.text();
-      const collections = csvToCollections(csv);
-
-      fillCache(collections);
+      })
+        .then(response => {
+          if (!response.ok || response.status !== 200) {
+            setTimeout(() => {
+              throw new Error(response.statusText);
+            });
+          }
+          return response;
+        })
+        .then(response => response.text())
+        .then(csv => csvToCollections(csv))
+        .then(collections => fillCache(collections))
+        .then(() => cache.data);
+    } else {
+      return Promise.resolve(cache.data);
     }
-
-    return cache.data;
   }
 
   function filterAndSumBy(filters: Filters) {
@@ -202,4 +203,4 @@ export default () => {
 
     return new Date(y, m, d);
   }
-};
+}
