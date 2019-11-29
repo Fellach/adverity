@@ -21,7 +21,7 @@ export const reducer = (state: MetaState, action: Action) => {
         ...state,
         datasources: action.payload,
         campaigns:
-          action.payload.length < state.datasources.length
+          action.payload.length !== state.datasources.length
             ? []
             : state.campaigns
       } as MetaState;
