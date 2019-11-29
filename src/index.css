@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*:active {
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eeefef;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+main {
+  flex: 1;
+}
+
+aside {
+  flex: 0 0 33%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.apply-button {
+  display: block;
+  padding: 11px 12px;
+  margin: 12px 0;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #3b3b3bda;
+  background: #ffffff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.apply-button:hover {
+  background-color: #cccccc;
+}
+
+@media (max-width: 767px) {
+  section {
+    flex-direction: column;
+  }
+
+  aside {
+    margin-bottom: 30px;
+  }
+}
+
+.select__option {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
