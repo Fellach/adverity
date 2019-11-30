@@ -38,7 +38,6 @@ const Filters: React.FC<Props> = (props: Props) => {
       />
 
       <button
-        className="apply-button"
         disabled={
           campaignOptions.length === 0 && datasourceOptions.length === 0
         }

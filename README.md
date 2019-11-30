@@ -1,6 +1,6 @@
 # Adverity Challenge
 
-Preview at [fellach.github.io/adverity/](https://fellach.github.io/adverity/)
+Preview at [fellach.github.io/adverity/](https://fellach.github.io/adverity/) (Because of CSP I moved the CSV file into GH)
 
 ---
 

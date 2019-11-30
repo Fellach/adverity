@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+h1 {
+  margin: 0.5em 0;
+}
+
+h4 {
+  margin-bottom: 0.5em;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -26,8 +34,9 @@ section {
 }
 
 header {
-  width: 100%;
   display: flex;
+  width: 100%;
+  margin-bottom: 1.5em;
   justify-content: space-between;
   align-items: baseline;
 }
@@ -38,13 +47,10 @@ main {
 
 aside {
   flex: 0 0 33%;
+  max-width: 33%;
 }
 
 button {
-  cursor: pointer;
-}
-
-.apply-button {
   display: block;
   padding: 11px 12px;
   margin: 12px 0;
@@ -52,12 +58,14 @@ button {
   border-radius: 4px;
   color: #3b3b3bda;
   background: #ffffff;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
 }
-.apply-button:hover {
+
+button:hover {
   background-color: #cccccc;
 }
 
@@ -66,13 +74,21 @@ button {
     flex-direction: column;
   }
 
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    order: 1;
+  }
+
   aside {
+    max-width: none;
+    order: 2;
     margin-bottom: 30px;
   }
 }
 
 .select__option {
-  text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
 }

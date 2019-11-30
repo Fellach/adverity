@@ -17,6 +17,7 @@ const Filter: React.FC<Props> = (props: Props) => {
       <h4>{label}</h4>
       <WindowedSelect
         isMulti
+        closeMenuOnSelect={false}
         options={options.map(str2option)}
         value={selected.map(str2option)}
         isDisabled={options.length === 0}
