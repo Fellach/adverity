@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/adverity/static/css/main.f0c7598e.chunk.css",
-    "main.js": "/adverity/static/js/main.060610e2.chunk.js",
-    "main.js.map": "/adverity/static/js/main.060610e2.chunk.js.map",
+    "main.css": "/adverity/static/css/main.2f99f9a6.chunk.css",
+    "main.js": "/adverity/static/js/main.e347cae9.chunk.js",
+    "main.js.map": "/adverity/static/js/main.e347cae9.chunk.js.map",
     "runtime-main.js": "/adverity/static/js/runtime-main.eb81dfc6.js",
     "runtime-main.js.map": "/adverity/static/js/runtime-main.eb81dfc6.js.map",
     "static/css/2.242c93ec.chunk.css": "/adverity/static/css/2.242c93ec.chunk.css",
     "static/js/2.9784fb46.chunk.js": "/adverity/static/js/2.9784fb46.chunk.js",
     "static/js/2.9784fb46.chunk.js.map": "/adverity/static/js/2.9784fb46.chunk.js.map",
     "index.html": "/adverity/index.html",
-    "precache-manifest.921a22bf4ed2d1c414c393a85e59755c.js": "/adverity/precache-manifest.921a22bf4ed2d1c414c393a85e59755c.js",
+    "precache-manifest.d5987f2e5fa7fa293ee50cd62563f9fe.js": "/adverity/precache-manifest.d5987f2e5fa7fa293ee50cd62563f9fe.js",
     "service-worker.js": "/adverity/service-worker.js",
     "static/css/2.242c93ec.chunk.css.map": "/adverity/static/css/2.242c93ec.chunk.css.map",
-    "static/css/main.f0c7598e.chunk.css.map": "/adverity/static/css/main.f0c7598e.chunk.css.map",
+    "static/css/main.2f99f9a6.chunk.css.map": "/adverity/static/css/main.2f99f9a6.chunk.css.map",
     "static/media/index.css": "/adverity/static/media/roboto-latin-900italic.ebf6d164.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.eb81dfc6.js",
     "static/css/2.242c93ec.chunk.css",
     "static/js/2.9784fb46.chunk.js",
-    "static/css/main.f0c7598e.chunk.css",
-    "static/js/main.060610e2.chunk.js"
+    "static/css/main.2f99f9a6.chunk.css",
+    "static/js/main.e347cae9.chunk.js"
   ]
 }
