@@ -33,8 +33,7 @@ export function createWebWorker(worker: Function): Worker {
 }
 
 export default function() {
-  const url =
-    "http://adverity-challenge.s3-website-eu-west-1.amazonaws.com/DAMKBAoDBwoDBAkOBAYFCw.csv";
+  const url = "https://fellach.github.io/adverity/DAMKBAoDBwoDBAkOBAYFCw.csv";
   const cache: Cache = {
     data: [],
     datasources: [],
@@ -54,7 +53,12 @@ export default function() {
           .then(filterAndSumBy(e.data.payload))
           .then(createMetrics)
           .then(appendCollectionsFrom(cache))
-          .then(postMessage);
+          .then(postMessage)
+          .catch(err => {
+            setTimeout(() => {
+              throw err;
+            });
+          });
         break;
 
       case "SetDatasources":
@@ -95,9 +99,7 @@ export default function() {
       })
         .then(response => {
           if (!response.ok || response.status !== 200) {
-            setTimeout(() => {
-              throw new Error(response.statusText);
-            });
+            throw new Error(response.statusText);
           }
           return response;
         })

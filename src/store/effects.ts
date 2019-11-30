@@ -19,7 +19,8 @@ export const effects = (action: Action, dispatch: Function) => {
         dispatch(setCampaignOptionsAction(e.data.campaigns));
       };
 
-      worker.onerror = () => {
+      worker.onerror = (e: ErrorEvent) => {
+        e.preventDefault();
         dispatch(setErrorAction("Can't load data"));
       };
 
@@ -31,7 +32,8 @@ export const effects = (action: Action, dispatch: Function) => {
         dispatch(setCampaignOptionsAction(e.data));
       };
 
-      worker.onerror = () => {
+      worker.onerror = (e: ErrorEvent) => {
+        e.preventDefault();
         dispatch(setErrorAction("Can't filter Campaigns"));
       };
 
