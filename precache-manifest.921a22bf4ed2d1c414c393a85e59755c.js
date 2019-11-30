@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4387c395ae412f5867eb97e4fe47642",
+    "revision": "a49fa8a351a377f2b2b64e873ad80813",
     "url": "/adverity/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adverity/static/css/2.242c93ec.chunk.css"
   },
   {
-    "revision": "7431904cd72c00aa45dd",
+    "revision": "735ec98a802bed0ebf8d",
     "url": "/adverity/static/css/main.f0c7598e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adverity/static/js/2.9784fb46.chunk.js"
   },
   {
-    "revision": "7431904cd72c00aa45dd",
-    "url": "/adverity/static/js/main.7a99eda2.chunk.js"
+    "revision": "735ec98a802bed0ebf8d",
+    "url": "/adverity/static/js/main.060610e2.chunk.js"
   },
   {
     "revision": "d552e3ef4f9ab184c108",

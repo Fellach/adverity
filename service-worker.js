@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/adverity/precache-manifest.6373d1167da7b78dd997e7291687626f.js"
+  "/adverity/precache-manifest.921a22bf4ed2d1c414c393a85e59755c.js"
 );
 
 self.addEventListener('message', (event) => {
